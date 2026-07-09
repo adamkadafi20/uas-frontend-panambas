@@ -200,3 +200,8 @@ Route::group(['prefix'=> 'admin'],function(){
 
     });
 });
+
+Route::get('/buka-gambar', function () {
+    \Illuminate\Support\Facades\Artisan::call('storage:link');
+    return 'Berhasil buka gembok gambar Bre!';
+});
