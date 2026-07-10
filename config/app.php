@@ -55,10 +55,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+   'url' => 'https://uas-frontend-panambas-production.up.railway.app',
 
-    'asset_url' => env('ASSET_URL'),
-
+    'asset_url' => 'https://uas-frontend-panambas-production.up.railway.app',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
