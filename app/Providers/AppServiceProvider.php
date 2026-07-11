@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL; // 👈 Tambahan buat HTTPS
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,5 +23,10 @@ class AppServiceProvider extends ServiceProvider
     {
         // Ganti jadi Tailwind biar rapi!
         Paginator::useTailwind(); 
+
+        // 👈 Tambahan buat maksa jalan di HTTPS pas di Railway
+        if (env('APP_ENV') !== 'local') {
+            URL::forceScheme('https');
+        }
     }
 }
